@@ -26,7 +26,7 @@ def open_db(path: Path | str = DEFAULT_DB_PATH, readonly: bool = True
             f"Нет БД: {p}. Сначала запустите: python -m src.loader"
         )
     if readonly:
-        con = sqlite3.connect(f"file:{p}?mode=ro", uri=True)
+        con = sqlite3.connect(f"{p.resolve().as_uri()}?mode=ro", uri=True)
     else:
         con = sqlite3.connect(p)
     con.row_factory = sqlite3.Row
