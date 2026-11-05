@@ -86,6 +86,9 @@ volumes:
 ├── data/
 │   └── vulndb.sqlite       # собранная БД (не в git)
 │
+├── docs/
+│   └── technical_specifications.docx
+│
 ├── feed/                   # входные фиды
 │   ├── versions.json
 │   └── vulnerabilities.json
